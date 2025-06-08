@@ -96,6 +96,25 @@
     </footer>
 
     <script>
+    const form = document.querySelector('.kontakt-vorm');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = {
+            nimi: form[0].value,
+            email: form[1].value,
+            teema: form[2].value,
+            sisu: form[3].value,
+        };
+        const response = await fetch('/.netlify/functions/kontakt', {
+            method: 'POST',
+            body: JSON.stringify(data),
+        });
+        const result = await response.json();
+        alert(result.message);
+    });
+    </script>
+
+    <script>
         const burger = document.querySelector('.burger'); // leiab burgeri ikooni navist
         const navigation = document.querySelector('.navigation'); // leiab nav menüü
         burger.addEventListener('click', () => { // kui vajutad burgerile
