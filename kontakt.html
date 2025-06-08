@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kontakt - Adu Tuulik</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="avaleht.html">
+                    <img src="assets/logo.png" alt="Logo"/>
+                </a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="avaleht.html">Avaleht</a></li>
+                    <li><a href="epood.html">E-pood</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                    <li><a href="annetused.html">Annetused</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <img src="assets/cart.png" alt="Ostukorv" />
+                <span>0€</span>
+            </div>
+            <div class="burger">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <section class="epood-hero">
+        <div class="kontakt-hero-content">
+            <h1>Kontakt</h1>
+            <p>Võta meiega ühendust, kui soovid külastust broneerida, töötubades osaleda või lihtsalt rohkem teada saada Paope Adu tuuliku kohta.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>Võta ühendust</h2>
+            <form class="contact-form">
+                <div class="contact-row">
+                    <input type="text" name="name" placeholder="Sinu nimi" required>
+                    <input type="email" name="email" placeholder="Sinu email" required>
+                </div>
+                <textarea name="message" rows="6" placeholder="Sinu sõnum..." required></textarea>
+                <button type="submit" class="contact-submit-btn">Saada</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="avaleht.html">
+                <img src="assets/logovalge.png" alt="Adu Tuulik Logo" class="footer-logo">
+                </a>
+                <p class="footer-description">Tuulest kantud ajalugu ja tänapäevased elamused Hiiumaa südames.</p>
+            </div>
+        <div class="footer-column">
+            <h4 class="footer-heading">Üldine</h4>
+            <ul class="footer-links">
+                <li><a href="avaleht.html">Esileht</a></li>
+                <li><a href="epood.html">E-pood</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="annetused.html">Annetused</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-info">
+            <h4 class="footer-heading">Üldinfo</h4>
+            <ul class="footer-links">
+                <li><a href="tel:+37255512345">+372 5551 2345</a></li>
+                <li>Paope küla, Hiiumaa, Eesti</li>
+                <li><a href="mailto:info@paopetuulik.ee">info@paopetuulik.ee</a></li>
+                <li>MTÜ Paope Tuulik</li>
+            </ul>
+        </div>
+        <div class="footer-column footer-social">
+            <h4 class="footer-heading">Jälgi meid!</h4>
+            <div class="social-icons">
+                <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+            </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>© 2025 Paope Tuulik</p>
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger'); // leiab burgeri ikooni navist
+        const navigation = document.querySelector('.navigation'); // leiab nav menüü
+        burger.addEventListener('click', () => { // kui vajutad burgerile
+            navigation.classList.toggle('active'); // avab sulgeb menüü toggliga
+        });
+    </script>
+
+    </body>
+</html>
